@@ -1,0 +1,16 @@
+Django Project: djblogger
+From the tutorial:
+https://www.youtube.com/watch?v=hBCN5fVlZ08&list=PLOLrQ9Pn6cawJ9CbY-o_kQC4GOWfhCFHq
+Video numéro 13
+
+Multiple settings files based on environment (Dev or Prod environment):
+- Created a directory Inside core called "settings"
+- Seperated settings.py file into base.py, dev.py and local.py settings files.
+
+Generate Django Secret Key:
+python manage.py shell
+>>> from django.core.management.utils import get_random_secret_key
+>>> print(get_random_secret_key())
+
+Environment variables:
+pip install python-dotenv
