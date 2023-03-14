@@ -15,3 +15,5 @@ python manage.py shell
 Environment variables management using python-dotenv, .env, etc..
 
 Installed black code formatter, flake8 for linting
+
+Create new apps inside core directory (where we have the settings): python manage.py startapp blog core/blog
