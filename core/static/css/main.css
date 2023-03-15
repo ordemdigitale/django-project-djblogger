@@ -21,3 +21,19 @@ body {
 .fw-500 {
     font-weight: 500 !important;
 }
+
+.infscroll-title {
+    font-size: 22px;
+    letter-spacing: -0.6px;
+}
+
+@media only screen and (max-width: 780px) {
+    .infscroll-title {
+        font-size: 0.9375rem;
+        letter-spacing: -0.0px;
+    }
+    .infscroll-author,
+    .infscroll-date {
+        font-size: 0.8125rem;
+    }
+}

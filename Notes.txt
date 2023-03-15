@@ -18,6 +18,10 @@ Installed black code formatter, flake8 for linting
 
 Create new apps inside core directory (where we have the settings): python manage.py startapp blog core/blog
 
+Installed factory-boy package to populate a database with data. Check factory.py file
+
+Impement lazy loading or infinite scrolling with htmx: pip install django-htmx
+
 Created branch dev-1.0.1: (https://www.youtube.com/watch?v=e2IbNHi4uCI)
 $ git branch <branch name>
 $ git switch <branch name>
