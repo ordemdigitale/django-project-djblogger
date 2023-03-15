@@ -2,6 +2,7 @@ import uuid
 
 from django.contrib.auth.models import User
 from django.db import models
+from taggit.managers import TaggableManager
 
 
 class Post(models.Model):
@@ -23,6 +24,7 @@ class Post(models.Model):
     )
     content = models.TextField()
     status = models.CharField(max_length=10, choices=options, default="draft")
+    tags = TaggableManager()
     created_at = models.DateField(auto_now_add=True, editable=False)
     updated_at = models.DateField(auto_now=True)
 

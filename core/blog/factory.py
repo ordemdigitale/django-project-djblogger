@@ -24,3 +24,23 @@ class PostFactory(factory.django.DjangoModelFactory):
         return x
 
     status = "published"
+
+    @factory.post_generation  # decorator to trigger after post is saved
+    def tags(self, create, extracted, **kwargs):
+        if not create:
+            return
+
+        if extracted:
+            self.tags.add(extracted)
+        else:
+            self.tags.add(
+                "Robotics & AI",
+                "Privacy",
+                "Apps",
+                "Transportation",
+                "Startups",
+                "Crypto",
+                "Government & Policy",
+                "Venture",
+                "Enterprise",
+            )

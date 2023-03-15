@@ -22,6 +22,8 @@ Installed factory-boy package to populate a database with data. Check factory.py
 
 Impement lazy loading or infinite scrolling with htmx: pip install django-htmx
 
+Tagging feature using pip install django-taggit
+
 Created branch dev-1.0.1: (https://www.youtube.com/watch?v=e2IbNHi4uCI)
 $ git branch <branch name>
 $ git switch <branch name>
