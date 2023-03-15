@@ -2,7 +2,19 @@ import uuid
 
 from django.contrib.auth.models import User
 from django.db import models
+from django.utils.translation import ugettext_lazy as _
 from taggit.managers import TaggableManager
+from taggit.models import GenericUUIDTaggedItemBase, TaggedItemBase
+
+
+class UUIDTaggedItem(GenericUUIDTaggedItemBase, TaggedItemBase):
+    # If you only inherit GenericUUIDTaggedItemBase, you need to define
+    # a tag field. e.g.
+    # tag = models.ForeignKey(Tag, related_name="uuid_tagged_items", on_delete=models.CASCADE)
+
+    class Meta:
+        verbose_name = _("Tag")
+        verbose_name_plural = _("Tags")
 
 
 class Post(models.Model):
@@ -24,7 +36,7 @@ class Post(models.Model):
     )
     content = models.TextField()
     status = models.CharField(max_length=10, choices=options, default="draft")
-    tags = TaggableManager()
+    tags = TaggableManager(through=UUIDTaggedItem)
     created_at = models.DateField(auto_now_add=True, editable=False)
     updated_at = models.DateField(auto_now=True)
 
