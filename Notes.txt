@@ -1,7 +1,7 @@
 Django Project: djblogger
 From the tutorial:
 https://www.youtube.com/watch?v=hBCN5fVlZ08&list=PLOLrQ9Pn6cawJ9CbY-o_kQC4GOWfhCFHq
-Video numéro 13
+Video numéro 22
 
 Multiple settings files based on environment (Dev or Prod environment):
 - Created a directory Inside core called "settings"
@@ -17,3 +17,7 @@ Environment variables management using python-dotenv, .env, etc..
 Installed black code formatter, flake8 for linting
 
 Create new apps inside core directory (where we have the settings): python manage.py startapp blog core/blog
+
+Created branch dev-1.0.1: (https://www.youtube.com/watch?v=e2IbNHi4uCI)
+$ git branch <branch name>
+$ git switch <branch name>
