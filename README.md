@@ -1,1 +1,1 @@
-# Welcome to Blogger **a Django project**.
+# Welcome to Blogger, **a Django project**.
