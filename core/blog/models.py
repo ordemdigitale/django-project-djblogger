@@ -2,6 +2,7 @@ import uuid
 
 from django.contrib.auth.models import User
 from django.db import models
+from django.urls import reverse
 from django.utils.translation import ugettext_lazy as _
 from taggit.managers import TaggableManager
 from taggit.models import GenericUUIDTaggedItemBase, TaggedItemBase
@@ -39,6 +40,9 @@ class Post(models.Model):
     tags = TaggableManager(through=UUIDTaggedItem)
     created_at = models.DateField(auto_now_add=True, editable=False)
     updated_at = models.DateField(auto_now=True)
+
+    def get_absolute_url(self):
+        return reverse("post_single", args=[self.slug])
 
     class Meta:
         ordering = ("-created_at",)
