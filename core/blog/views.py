@@ -17,5 +17,8 @@ class HomeView(ListView):
 
 def post_single(request, post):
     post = get_object_or_404(Post, slug=post, status="published")
-    context = {"post": post}
+    related = Post.objects.filter(author=post.author)[:5]
+
+    context = {"post": post, "related": related}
+
     return render(request, "blog/single.html", context)

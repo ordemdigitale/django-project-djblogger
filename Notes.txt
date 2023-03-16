@@ -1,7 +1,6 @@
 Django Project: djblogger
-From the tutorial:
+From the tutorial:(completed)
 https://www.youtube.com/watch?v=hBCN5fVlZ08&list=PLOLrQ9Pn6cawJ9CbY-o_kQC4GOWfhCFHq
-Video numéro 37 minute 11
 
 Multiple settings files based on environment (Dev or Prod environment):
 - Created a directory Inside core called "settings"
